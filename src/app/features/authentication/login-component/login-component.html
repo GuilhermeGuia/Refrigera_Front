@@ -1,0 +1,24 @@
+<div class="app-main-login">
+    <div class="side-image-login">
+        <img src="/assets/backgrounds/background-login.jpg" alt="">
+    </div>
+    <div class="side-login">
+        <div class="box-login">
+            <h1 class="title-box-login">Refrigera+</h1>
+            <div class="form">
+
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input nz-input [(ngModel)]="email" type="email" class="login-input" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Senha</label>
+                    <input nz-input [(ngModel)]="password" type="password" class="login-input" />
+                </div>
+
+                <button class="btn-login btn-font" (click)="onLogin()">Acessar</button>
+            </div>
+        </div>
+    </div>
+</div>

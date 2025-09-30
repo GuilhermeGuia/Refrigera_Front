@@ -1,0 +1,58 @@
+.app-main-login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.side-image-login {
+    background-color: red;
+    min-height: 100vh;
+}
+
+.side-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.box-login {
+    min-width: 450px;
+}
+
+.title-box-login {
+    color: #1E90FF;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.login-input {
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.btn-login {
+    margin-top: 20px;
+    background-color: #1E90FF;
+    width: 100%;
+    border: 0;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.btn-font {
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+}
