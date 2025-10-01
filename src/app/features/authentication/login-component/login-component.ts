@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NzInputModule } from 'ng-zorro-antd/input';
-import { AuthService } from '../../../core/services/auth-service';
+import { AuthenticationService } from '../../../core/services/authentication-service';
 
 @Component({
   selector: 'app-login-component',
@@ -14,7 +14,7 @@ export class LoginComponent {
   password?: string;
 
   constructor(
-   private auth: AuthService
+   private auth: AuthenticationService
   ) {  
   }
 
