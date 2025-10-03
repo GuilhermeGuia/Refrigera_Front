@@ -4,21 +4,31 @@
     </div>
     <div class="side-login">
         <div class="box-login">
-            <h1 class="title-box-login">Refrigera+</h1>
-            <div class="form">
+            <!-- <div class="box-error" *ngIf="error"></div> -->
 
+            <h1 class="title-box-login">Refrigera+</h1>
+            <form [formGroup]="loginForm" class="form-login" (ngSubmit)="onLogin()">
                 <div class="form-group">
                     <label class="form-label">Email</label>
-                    <input nz-input [(ngModel)]="email" type="email" class="login-input" />
+                    <input nz-input formControlName="email" type="email" class="login-input" />
+                    @if (loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched) {
+                        <p class="error-validation">Email obrigatório</p>
+                    }
+                    @if (loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched) {
+                        <p class="error-validation">Email inválido</p>
+                    }
                 </div>
 
                 <div class="form-group">
                     <label class="form-label">Senha</label>
-                    <input nz-input [(ngModel)]="password" type="password" class="login-input" />
+                    <input nz-input formControlName="senha" type="password" class="login-input" />
+                    @if (loginForm.get('senha')?.hasError('required') && loginForm.get('senha')?.touched) {
+                        <p class="error-validation">Senha obrigatória</p>
+                    }
                 </div>
 
-                <button class="btn-login btn-font" (click)="onLogin()">Acessar</button>
-            </div>
+                <button class="btn-login btn-font" type="submit">Acessar</button>
+            </form>
         </div>
     </div>
 </div>

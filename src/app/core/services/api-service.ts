@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { BaseResponse } from '../models/base/BaseResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -28,11 +29,11 @@ export class ApiService  {
 
   public get<T>(endpoint: string): Observable<T>
   {
-    return this.http.get<T>(endpoint, { headers: this.getHeaders()});
+    return this.http.get<T>(`${this.BASE_URL}${endpoint}`, { headers: this.getHeaders()});
   }
 
-  public post<T>(endpoint: string, body: {}): Observable<T>
+  public post<T>(endpoint: string, body: {}): Observable<BaseResponse<T>>
   {
-    return this.http.post<T>(endpoint, body, { headers: this.getHeaders()});
+    return this.http.post<BaseResponse<T>>(`${this.BASE_URL}${endpoint}`, body, { headers: this.getHeaders()});
   }
 }
