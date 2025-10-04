@@ -4,7 +4,6 @@
 }
 
 .side-image-login {
-    background-color: red;
     min-height: 100vh;
 }
 
@@ -25,7 +24,7 @@
     font-size: 36px;
 }
 
-.form-group {
+.mb-16 {
     margin-bottom: 16px;
 }
 
@@ -42,15 +41,16 @@
     font-size: 16px;
 }
 
-.btn-login {
+[nz-button] {
     margin-top: 20px;
     background-color: #1E90FF;
     width: 100%;
-    border: 0;
-    padding: 8px;
+
     border-radius: 6px;
     cursor: pointer;
 }
+
+
 .btn-font {
     font-size: 18px;
     color: #fff;
@@ -62,3 +62,18 @@
     font-size: 14px;
     margin-top: 4px;
 }
+
+.box-error 
+{
+    background-color: #FFF1F4;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    gap: 15px;
+
+    font-size: 17px;
+}
+
+

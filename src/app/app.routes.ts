@@ -6,6 +6,11 @@ import { HomeComponent } from './features/application/home/home-component';
 import { AuthGuard } from './core/guards/auth-guard-guard';
 
 export const routes: Routes = [
+  // {
+  //   path: "**",
+  //   redirectTo: "login",
+  //   pathMatch: "full"
+  // },
   {
     canActivate: [AuthGuard],
     path: '',

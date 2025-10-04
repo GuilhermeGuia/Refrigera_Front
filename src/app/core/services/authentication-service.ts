@@ -18,7 +18,7 @@ export class AuthenticationService  {
   private router: Router
   ) {}
 
-  login(credentials: LoginRequest): Observable<any> {
+  login(credentials: LoginRequest) {
     return this.apiService
       .post<LoginResponse>(`${this.controller}/Login`, credentials)
       .pipe(
